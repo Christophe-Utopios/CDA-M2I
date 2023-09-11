@@ -6,7 +6,7 @@ var revenus = 0,
     nbAdulte = 0,
     nbEnfants = 0,
     nbParts = 0,
-    revenuIMpossable = 0,
+    revenuImposable = 0,
     montantImpot = 0;
 
 // Création de la constante result permettant de recupérer l'élément HTML class="result"
