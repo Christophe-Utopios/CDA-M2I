@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Title -->
+    <title>TP-POO - Liste de contacts</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">TP-POO - ANNUAIRE - Liste de contacts</h1>
+            <hr>
+            <p class="lead">Mise en application de la théorie<mark> POO </mark> en <mark> Javascript </mark>
+            </p>
+        </div>
+
+        <div class="card">
+            <h3 class="card-title">
+                Liste de Contacts
+            </h3>
+            <table class="table table-hover">
+                <thead>
+                    <th scope="col">Titre</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Date Naissance</th>
+                    <th scope="col">Téléphone</th>
+                    <th scope="col">Email</th>
+                </thead>
+                <tbody id="tableau">
+                    <!-- On injecte les lignes du tableau Ici -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Formulaire Ajout contact -->
+        <div class="card">
+            <h3 class="title">Ajout de contact</h3>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="titre" id="Mr" value="Mr" class="form-check-inline">
+                <label for="Mr" class="form-check-label">Mr</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="titre" id="Mme" value="Mme" class="form-check-inline" checked>
+                <label for="Mme" class="form-check-label">Mme</label>
+            </div>
+            <div class="row m-1">
+                <input type="text" name="Nom" id="Nom" placeholder="Nom" class="col p-1 form-control">
+                <input type="text" name="Prenom" id="Prenom" placeholder="Prénom" class="col p-1 form-control">
+            </div>
+            <div class="row m-1">
+                <input type="date" name="dateNaissance" id="dateNaissance" class="col p-1 form-control">
+                <input type="text" name="Telephone" id="Telephone" placeholder="Telephone" class="col p-1 form-control">
+                <input type="email" name="Email" id="Email" placeholder="Email" class="col p-1 form-control">
+            </div>
+            <div class="row m-1">
+                <button class="btn btn-success" id="btnValider">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- script js -->
+    <script type="module" src="./module/index.js"></script>
+</body>
+
+</html>
