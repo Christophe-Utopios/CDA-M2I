@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">TPP - PARKING JS - LES CLASSES</h1>
+            <hr>
+            <p class="lead">Création et utilisation des<mark> Classes et modules </mark> en
+                <mark>Javascript</mark>
+            </p>
+        </div>
+        <div class="card">
+            <div class="card-title">
+                Parking 3000
+            </div>
+            <div class="alert alert-success" role="alert" id="successBox"></div>
+            <div class="alert alert-danger" role="alert" id="alertBox"></div>
+            <div class="alert alert-warning" role="alert" id="messageBox"></div>
+
+            <div class="input-group mb-3">
+                <input type="text" id="licencePlate" class="form-control" placeholder="Saisir votre immatriculation"
+                    aria-label="Recipient's immatriculation" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="button" id="paymentBtn">Payer</button>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="enterBtn">Obtenir un ticket</button>
+
+        </div>
+
+
+        <div class="result lead"></div>
+
+        <script type="module" src="./js/main.js"></script>
+    </div>
+</body>
+
+</html>
