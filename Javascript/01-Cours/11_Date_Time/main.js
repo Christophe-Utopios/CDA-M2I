@@ -32,3 +32,8 @@ btnOut.addEventListener('click',(e) => {
     alert((outTime-inTime)/1000)
 })
 
+// Date choisie
+
+let madate2 = new Date("2023-09-19T10:30:00")
+console.log("Pause à : "+ madate2)
+
