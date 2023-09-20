@@ -118,8 +118,10 @@ function deleteItem(e) {
 // edit item
 function editItem(e) {
   const element = e.currentTarget.parentElement.parentElement;
+  console.log(element)
   // set edit item
   editElement = e.currentTarget.parentElement.previousElementSibling;
+  console.log(editElement)
   // set form value
   grocery.value = editElement.innerHTML;
   editFlag = true;
@@ -141,8 +143,10 @@ function setBackToDefault() {
 function addToLocalStorage(id, value) {
   const grocery = { id, value };
   let items = getLocalStorage();
+ //localStorage.setItem("toto", JSON.stringify(items));
   items.push(grocery);
   localStorage.setItem("list", JSON.stringify(items));
+ 
 }
 
 function getLocalStorage() {
@@ -155,7 +159,9 @@ function removeFromLocalStorage(id) {
   let items = getLocalStorage();
 
   items = items.filter(function (item) {
-    if (item.id !== id) {
+    if (item.id == id) {
+      console.log("INTRUS : "+item.value)
+    }else{
       return item;
     }
   });
