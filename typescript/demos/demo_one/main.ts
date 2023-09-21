@@ -70,4 +70,20 @@ console.log("resultat de 1 + 2 = "+result)
 
 //let resultB = multiply("A","B") // ne marche pas
 
+// Array
 
+// Pour définir un tableau de number , il faut utiliser le type suivi des crochets
+let numbers: number[] = [1,2,3,4]
+// ou
+let numbers2: Array<number> = [1,2,3,4]
+
+//numbers.push("toto") // erreur
+numbers.push(5)
+console.log(numbers)
+console.table(numbers2)
+
+// Dans un tableau array de type any on peut mettre ce que l'on veut
+
+let tab: any[];
+
+// On peux declarer qui contient plusieurs types alors tous ces types peuvent etres present dans le tableau
