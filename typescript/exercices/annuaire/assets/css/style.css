@@ -1,0 +1,23 @@
+#details-avatarURL {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: white;
+  }
+  
+  .myModal {
+    z-index: 1;
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .myModal-content {
+    margin: 10% auto;
+    width: 80%;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: white;
+  }
