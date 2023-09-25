@@ -31,11 +31,12 @@ function displayFirst() {
   if (pokemons.length > 0) {
     container.style.display = ""
     loading.style.display = "none"
-    const item = pokemons[currentItem];
-    img.src = item.img;
-    name.textContent = item.name;
-    weight.textContent = item.weight;
-    height.textContent = item.taille;
+    // const item = pokemons[currentItem];
+    // img.src = item.img;
+    // name.textContent = item.name;
+    // weight.textContent = item.weight;
+    // height.textContent = item.taille;
+    showPokemon()
   }
 }
 

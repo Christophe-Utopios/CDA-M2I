@@ -6,7 +6,6 @@ const apiUrl = "https://pokeapi.co/api/v2/pokemon/"
 
 async function getPokemonInfo(pokemonNumber) {
     try {
-        // const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         const response = await fetch(apiUrl + pokemonNumber);
         if (!response.ok) {
             throw new Error(`Erreur HTTP: ${response.status}`);
