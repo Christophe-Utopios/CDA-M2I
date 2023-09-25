@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>Liste de Notes</title>
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row my-3">
+                <div class="col-12 col-md-10 offset-md-1 bg-dark text-white rounded p-3">
+                    <h5 class="display-5">- Liste de Notes -</h5>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex">
+                                <h6 class="display-6 d-inline me-auto">Ajouter un Elève</h6>
+                                <button class="btn btn-outline-light" id="add-student-visibility">ON</button>
+                            </div>
+                            <hr>
+                            <form class="d-none" id="add-student-form">
+                                <div class="row mb-3">
+                                    <div class="col-3">
+                                        <label for="student-lastname" class="form-label">Nom :</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" name="student-lastname"
+                                            id="student-lastname" placeholder="MARTIN" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-3">
+                                        <label for="student-firstname" class="form-label">Prénom :</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" name="student-firstname"
+                                            id="student-firstname" placeholder="John" required>
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button class="btn btn-outline-light" type="submit"><i class="bi bi-send"></i> Ajouter</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex">
+                                <h6 class="display-6 d-inline me-auto">Ajouter une Matière</h6>
+                                <button class="btn btn-outline-light" id="add-lessonfield-visibility">ON</button>
+                            </div>
+                            <hr>
+                            <form class="d-none" id="add-lessonfield-form">
+                                <div class="row mb-3">
+                                    <div class="col-3">
+                                        <label for="lesson-field" class="form-label">Intitulé :</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" name="lesson-field"
+                                            id="lesson-field" placeholder="Mathématiques">
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button class="btn btn-outline-light"><i class="bi bi-send"></i> Ajouter</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex">
+                                <h6 class="display-6 d-inline me-auto">Ajouter une Note</h6>
+                                <button class="btn btn-outline-light" id="add-grade-visibility">ON</button>
+                            </div>
+                            <hr>
+                            <form class="d-none" id="add-grade-form">
+                                <div class="row mb-3">
+                                    <div class="col-3">
+                                        <label for="grade-student" class="form-label">Elève :</label>
+                                    </div>
+                                    <div class="col">
+                                        <select type="text" class="form-select" name="grade-student"
+                                            id="grade-student">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-3">
+                                        <label for="grade" class="form-label">Note :</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" name="grade"
+                                            id="grade" placeholder="15.4">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-3">
+                                        <label for="grade-field" class="form-label">Matière :</label>
+                                    </div>
+                                    <div class="col">
+                                        <select type="text" class="form-select" name="grade-field"
+                                            id="grade-field">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="text-end mt-4">
+                                    <button class="btn btn-outline-light"><i class="bi bi-send"></i> Ajouter</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 class="display-6">Sélection</h6>
+                    <hr>
+                    <div class="row px-3">
+                        <div class="col row">
+                            <div class="col-auto">
+                                <label for="student-choice" class="form-label">Elève :</label>
+                            </div>
+                            <div class="col">
+                                <select name="student-choice" id="student-choice" class="form-select"></select>
+                            </div>
+                        </div>
+                        <div class="col row">
+                            <div class="col-auto">
+                                <label for="lessonfield-choice" class="form-label">Matière :</label>
+                            </div>
+                            <div class="col">
+                                <select name="lessonfield-choice" id="lessonfield-choice" class="form-select"></select>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3 text-end" id="average-grade">
+                        </div>
+                    </div>
+                    <h6 class="display-6 mt-5">Notes</h6>
+                    <hr>
+                    <table class="table table-dark table-stiped text-center">
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prenom</th>
+                                <th>Matière</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-data">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./main.js"></script>
+</body>
+
+</html>
