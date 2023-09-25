@@ -1,4 +1,19 @@
-export class Person {
+/*
+  Lorsque l'on veut faire des classes en Typescript, il nous faut modifier un peu la syntaxe
+
+  Première chose : Il va nous falloir ajouter des niveaux d'accessibilité à nos attributs :
+    - public : L'attribut / la méthode sera accessible à tous, que cela soit dans la classe, dans les classes enfants, dans les autres classes
+    - protected: L'attribut / la méthode sera accessible à notre classe et à ses enfants
+    - private : L'attribut / la méthode ne sera accessible que dans la classe
+    - readonly: L'attribut sera constant une fois assigné. Il faudra lui affecter une valeur dans le constructeur. Par la suite, il sera publique pour la lecture mais ne pourra pas être modifié
+
+  A côté de cela, le Typescript permet la création d'attributs / de méthodes 'static'. Ces attributs / méthodes seront
+  disponibles via la syntaxe <Nom de la classe>.<Nom de l'attribut ou de la méthode>
+  et non de <Nom d'un objet>.<Nom de l'attribut ou de la méthode>
+
+  Les attributs statiques sont particulièrement utiles pour faire un compteur d'éléments créé de cette classe.
+*/
+class Person {
     constructor(firstname, lastname, age, numeroIdNat) {
         this._id = ++Person._count;
         this._firstname = firstname;
@@ -24,3 +39,13 @@ export class Person {
     }
 }
 Person._count = 0;
+class Student extends Person {
+    constructor(firstname, lastname, age, numeroIdNat, backpack) {
+        super(firstname, lastname, age, numeroIdNat);
+        this._backpack = backpack;
+    }
+    toString() {
+        return this.fullname + ` backpack ? ${this._backpack}`;
+    }
+}
+export { Person, Student };
