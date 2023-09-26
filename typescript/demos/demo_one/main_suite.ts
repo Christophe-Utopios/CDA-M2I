@@ -172,4 +172,25 @@ function onInputChanged(event: InputEvent){
 }
 
 
+// Union type
+
+
+let strOrNum: string | number; // string ou number
+
+strOrNum = "true";
+strOrNum = 42;
+
+type stringorNumber = string | number ;
+
+let strNum: stringorNumber;
+
+let monTableau: stringorNumber[] = []
+
+monTableau.push(23)
+monTableau.push("Hello")
+
+console.table(monTableau)
+
+
+
 

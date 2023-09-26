@@ -150,3 +150,4 @@ let monObjet: object = {
 console.log("monObjet  objet : "+typeof monObjet)
 monObjet = []
 console.log("monObjet  array : "+typeof monObjet)
+
