@@ -7,4 +7,115 @@ const contacts = [
     new Contact("Elizabeth", "MARTIN", new Date("1964-02-22"), "e.martin@example.com", "+33 119 788 254", "")
 ];
 console.table(contacts);
+const btnAddContacts = document.getElementById("btnAddContact");
+const btnEditContacts = document.getElementById("btnEditContact");
+const btnDeleteContacts = document.getElementById("btnDeleteContact");
 const contactsContainer = document.getElementById("contactsContainer");
+const addContactModal = document.getElementById("addContactModal");
+const closeAddContactCross = document.getElementById("addContactClose");
+const formAddContact = document.getElementById("formAddContact");
+const editContactModal = document.getElementById("editContactModal");
+const closeEditContactCross = document.getElementById("editContactClose");
+const formEditContact = document.getElementById("formEditContact");
+let selectedContact = contacts[0];
+const refreshContactContainer = () => {
+    console.log("mettre les contacts de mon tableau dans mon dom");
+    contactsContainer.innerHTML = "";
+    contacts.forEach(contact => {
+        const newButton = document.createElement("button");
+        newButton.textContent = contact.fullname;
+        newButton.className = contact === selectedContact ? "btn btn-light w-100 my-2" : "btn btn-outline-light w-100 my-2";
+        newButton.addEventListener('click', () => {
+            selectedContact = contact;
+            refreshContactContainer();
+            refreshContactInfos();
+        });
+        contactsContainer.appendChild(newButton);
+    });
+};
+const refreshContactInfos = () => {
+    console.log("afficher tous les details d'un contact");
+    console.log(selectedContact);
+    const firstnameEl = document.getElementById("details-firstname");
+    const lastnameEl = document.getElementById("details-lastname");
+    const avatarEl = document.getElementById("details-avatarURL");
+    const dateOfBirthEl = document.getElementById("details-dateOfBirth");
+    const ageEl = document.getElementById("details-age");
+    const emailEl = document.getElementById("details-email");
+    const phoneNumberEl = document.getElementById("details-phoneNumber");
+    firstnameEl.value = selectedContact ? selectedContact.firstname : "";
+    lastnameEl.value = selectedContact ? selectedContact.lastname : "";
+    dateOfBirthEl.value = selectedContact ? selectedContact.dateOfBirth.toLocaleDateString() : "";
+    emailEl.value = selectedContact ? selectedContact.email : "";
+    phoneNumberEl.value = selectedContact ? selectedContact.phoneNumber : "";
+    avatarEl.src = selectedContact ? selectedContact.avatarURL : "./assets/img/unknown.jpg";
+    ageEl.textContent = selectedContact ? `${selectedContact.age}yo` : "";
+};
+btnAddContacts.addEventListener('click', () => {
+    addContactModal.style.display = "block";
+});
+formAddContact.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const firstnameEl = document.getElementById("add-firstname");
+    const lastnameEl = document.getElementById("add-lastname");
+    const dateOfBirthEl = document.getElementById("add-dateOfBirth");
+    const emailEl = document.getElementById("add-email");
+    const phoneNumberEl = document.getElementById("add-phoneNumber");
+    const avatarEl = document.getElementById("add-avatarURL");
+    console.log(dateOfBirthEl.value);
+    const newContact = new Contact(firstnameEl.value, lastnameEl.value, new Date(dateOfBirthEl.value.split("/").reverse().join("-")), emailEl.value, phoneNumberEl.value, avatarEl.value);
+    contacts.push(newContact);
+    refreshContactContainer();
+    addContactModal.style.display = "none";
+});
+closeAddContactCross.addEventListener('click', () => {
+    addContactModal.style.display = "none";
+});
+btnDeleteContacts.addEventListener('click', () => {
+    if (confirm("Are you sure?")) {
+        contacts.splice(contacts.indexOf(selectedContact), 1);
+        selectedContact = undefined;
+        refreshContactContainer();
+        refreshContactInfos();
+    }
+});
+btnEditContacts.addEventListener('click', () => {
+    if (selectedContact) {
+        editContactModal.style.display = "block";
+        const firstnameEl = document.getElementById("edit-firstname");
+        const lastnameEl = document.getElementById("edit-lastname");
+        const avatarEl = document.getElementById("edit-avatarURL");
+        const dateOfBirthEl = document.getElementById("edit-dateOfBirth");
+        const emailEl = document.getElementById("edit-email");
+        const phoneNumberEl = document.getElementById("edit-phoneNumber");
+        firstnameEl.value = selectedContact.firstname;
+        lastnameEl.value = selectedContact.lastname;
+        dateOfBirthEl.value = selectedContact.dateOfBirth.toLocaleDateString().split("/").reverse().join("-");
+        emailEl.value = selectedContact.email;
+        phoneNumberEl.value = selectedContact.phoneNumber;
+        avatarEl.value = selectedContact.avatarURL;
+    }
+});
+closeEditContactCross.addEventListener('click', () => {
+    editContactModal.style.display = "none";
+});
+formEditContact.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const firstnameEl = document.getElementById("edit-firstname");
+    const lastnameEl = document.getElementById("edit-lastname");
+    const avatarEl = document.getElementById("edit-avatarURL");
+    const dateOfBirthEl = document.getElementById("edit-dateOfBirth");
+    const emailEl = document.getElementById("edit-email");
+    const phoneNumberEl = document.getElementById("edit-phoneNumber");
+    selectedContact.firstname = firstnameEl.value;
+    selectedContact.lastname = lastnameEl.value;
+    selectedContact.avatarURL = avatarEl.value;
+    selectedContact.email = emailEl.value;
+    selectedContact.phoneNumber = phoneNumberEl.value;
+    selectedContact.dateOfBirth = new Date(dateOfBirthEl.value.split("/").reverse().join("-"));
+    editContactModal.style.display = "none";
+    refreshContactContainer();
+    refreshContactInfos();
+});
+refreshContactContainer();
+refreshContactInfos();
