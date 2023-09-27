@@ -29,5 +29,4 @@ personnes.forEach(personne => {
     console.log(`${personne.nom} ${personne.age}`);
     let bonus = ("occupation" in personne) ? "Son occupation est : " + personne.occupation : "Son role est : " + personne.role;
     console.log(bonus);
-    console.log(personne);
 });
