@@ -191,6 +191,34 @@ monTableau.push("Hello")
 
 console.table(monTableau)
 
+// Intersection type
+
+interface Poisson {
+    nom: string,
+    yeux: number
+}
+
+interface Couleur {
+    href: string
+}
+
+let poissonRouge: Poisson & Couleur;
+
+type PoissonRed = Poisson & Couleur;
+
+let poissonVert: PoissonRed;
+
+poissonRouge = {
+    nom: "toto",
+    yeux: 3,
+    href: "#FFFFFF",
+}
+
+poissonVert = {
+    nom: "toto",
+    yeux: 3,
+    href: "#FFFFFF",  
+}
 
 
 
