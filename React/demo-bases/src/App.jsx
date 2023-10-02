@@ -1,10 +1,9 @@
-import FirstComponent from "./components/FirstComponent";
-import DemoTableRow from "./components/DemoTableRow";
+import DemoListingComponent from "./components/DemoListingComponent";
 
 function App() {
   return (
     <div className="App">
-      <FirstComponent />
+      <DemoListingComponent />
       
     </div>
   );
