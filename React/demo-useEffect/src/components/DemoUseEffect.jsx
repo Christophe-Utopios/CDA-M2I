@@ -15,7 +15,7 @@ const DemoUseEffect = () => {
     
     useEffect(() => {
         setFullname(firstname + " " + lastname) // fullname => 'a' + ' ' + ''
-    }, [firstname])
+    }, [firstname, lastname])
 
 
     return (

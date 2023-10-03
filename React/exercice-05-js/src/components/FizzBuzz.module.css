@@ -1,0 +1,49 @@
+.baseFizzBuzz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.button {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-color: rgb(194, 47, 47);
+    border: none;
+    border-radius: 50%;
+    bottom: 0;
+    font-size: 1.2rem;
+}
+
+.button:is([disabled]) {
+    background-color: gray;
+}
+
+.button:not([disabled]):hover {
+    background-color: rgb(240, 48, 22);
+    cursor: pointer;
+}
+
+.button:first-child {
+    left: 0;
+}
+
+.button:last-child {
+    right: 0;
+}
+
+.resultSpan {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(239, 127, 127);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
