@@ -35,6 +35,10 @@ class FirstStatefulComponent extends PureComponent {
         console.log("--- COMPONENT WILL UNMOUNT ---");
     }
 
+    changePrenom () {
+        this.setState(prevState => ({...prevState, monPrenom: "Titi"}))
+    }
+
 
     render () {
         return (
@@ -43,7 +47,7 @@ class FirstStatefulComponent extends PureComponent {
                 <hr />
                 <p>Mon prénom est <b>{this.state.monPrenom}</b></p>
                 <hr />
-                <button onClick={() => this.setState(prevState => ({...prevState, monPrenom: "Titi"}))}>Change firstname</button>
+                <button onClick={this.changePrenom.bind(this)}>Change firstname</button>
             </>
         )
     }
