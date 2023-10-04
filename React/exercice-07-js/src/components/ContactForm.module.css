@@ -1,0 +1,62 @@
+.contactForm {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: rgb(8, 99, 179);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: monospace;
+    width: clamp(400px, 60%, 800px);
+
+    & div {
+        margin: 10px 0;
+    }
+    
+    & div:not(:last-child) {
+        display: flex;
+        flex-flow: column nowrap;
+
+        & label {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        & input {
+            background-color: rgb(9, 9, 39);
+            color: yellowgreen;
+            border: none;
+            padding: 5px;
+            font-family: monospace;
+        }
+    }
+
+    & div:last-child {
+        display: flex;
+        justify-content: end;
+
+        & button {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: bolder;
+            transition: transform 0.2s, color 0.2s;
+        }
+        
+        & button:not([disabled]) {
+            background-color: rgb(214, 205, 31);
+            color: white;
+        }
+        
+        & button:not([disabled]):hover {
+            background-color: rgb(240, 232, 67);
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        
+        & button:is([disabled]) {
+            background-color: rgb(112, 107, 10);
+            color: gray;
+
+        }
+    }
+}

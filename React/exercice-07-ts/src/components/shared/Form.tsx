@@ -2,6 +2,7 @@ import { ReactNode, FormEvent } from 'react'
 
 interface FormProps {
     children: ReactNode,
+    className: string
     onSubmit: (event: FormEvent) => void
 }
 
@@ -12,7 +13,7 @@ const Form = (props: FormProps) => {
     }
 
     return (
-        <form action="#" onSubmit={submitFormHandler}>
+        <form action="#" onSubmit={submitFormHandler} className={props.className}>
             {props.children}
         </form>
     )

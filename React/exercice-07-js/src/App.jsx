@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import ContactTable from './components/ContactTable'
-import Contact from './models/Contact'
 import ContactForm from './components/ContactForm'
 import classes from './App.module.css'
 
 function App() {
-  const [contacts, setContacts] = useState<Contact[]>([])
+  const [contacts, setContacts] = useState([])
 
-  const addContactHandler = (contact: Contact) => {
+  const addContactHandler = (contact) => {
     setContacts(previousContacts => [...previousContacts, contact])
   }
 

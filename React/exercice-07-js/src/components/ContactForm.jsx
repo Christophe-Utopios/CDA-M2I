@@ -1,28 +1,24 @@
-import { useState, FormEvent, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Form from "./shared/Form"
 import Contact from '../models/Contact'
 import classes from './ContactForm.module.css'
 
-interface ContactFormProps {
-    onAdd: (contact: Contact) => void
-}
-
-const ContactForm = (props: ContactFormProps) => {
+const ContactForm = (props) => {
     const [firstname, setFirstname] = useState("")
     const [lastname, setLastname] = useState("")
     const [birthDate, setBirthDate] = useState("")
     const [canSubmit, setCanSubmit] = useState(false)
 
-    const onInputChanged = (event: FormEvent, inputId: string) => {
+    const onInputChanged = (event, inputId) => {
         switch (inputId) {
             case 'firstname':
-                setFirstname((event.target as HTMLInputElement).value)
+                setFirstname(event.target.value)
             break;
             case 'lastname':
-                setLastname((event.target as HTMLInputElement).value)
+                setLastname(event.target.value)
             break;
             case 'birthDate':
-                setBirthDate((event.target as HTMLInputElement).value)
+                setBirthDate(event.target.value)
             break;
         }
     }
