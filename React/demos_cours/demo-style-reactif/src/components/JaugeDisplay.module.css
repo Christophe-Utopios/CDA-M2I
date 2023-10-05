@@ -1,0 +1,33 @@
+.jaugeDisplay {
+    background-color: rgba(255, 0, 0, 0.283);
+    height: 100px;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+
+
+    > span {
+        position: absolute;
+
+        z-index: 1;
+    }
+
+    > div {
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+
+        transition: right 100ms,
+                    filter 100ms;
+
+        background-color: red;
+    }
+}
