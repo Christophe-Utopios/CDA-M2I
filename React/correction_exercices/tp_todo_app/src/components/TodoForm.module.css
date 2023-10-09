@@ -1,0 +1,49 @@
+.todo__form {
+    background-color: rgb(184, 23, 23);
+    height: 800px;
+    padding: 50px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & div {
+
+        & input {
+            margin-top: 5px;
+            padding-bottom: 5px;
+            background-color: transparent;
+            border: none;
+            border-bottom: yellow 1px solid;
+            color: rgb(225, 194, 194);
+            font-size: 1.2rem;
+            outline: none;
+            width: 100%;
+        }
+
+        & button {
+            background-color: orange;
+            border-radius: 15px;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            box-sizing: border-box;
+            display: block;
+            margin: auto;
+            font-size: 1.2rem;
+            transition: transform 200ms ease,
+                        background-color 200ms ease;
+        }
+
+        & button:not([disabled]):hover {
+            background-color: rgb(255, 187, 59);
+            transform: scale(1.025);
+            cursor: pointer;
+        }
+
+        & button[disabled] {
+            background-color: rgb(84, 84, 84);
+        }
+    }
+}

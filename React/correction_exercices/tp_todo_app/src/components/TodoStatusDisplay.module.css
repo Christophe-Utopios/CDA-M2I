@@ -1,0 +1,25 @@
+.todo__status__display {
+    padding: 5px 15px;
+    margin-left: auto;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: monospace;
+    width: fit-content;
+    transition: transform 200ms ease,
+                filter 200ms ease;
+}
+
+.todo__status__display:hover {
+    filter: brightness(1.05);
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.todo__status__display[data-is-done=true] {
+    background-color: green;
+}
+
+.todo__status__display[data-is-done=false] {
+    background-color: yellow;
+}
