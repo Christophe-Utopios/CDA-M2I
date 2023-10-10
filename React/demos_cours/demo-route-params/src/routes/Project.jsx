@@ -8,7 +8,7 @@ const Project = () => {
 
     const [searchParams] = useSearchParams()
 
-    const mode = searchParams.get('mode')
+    const mode = searchParams.get('mode') ?? "defaut"
     const toto = searchParams.get('toto')
 
 

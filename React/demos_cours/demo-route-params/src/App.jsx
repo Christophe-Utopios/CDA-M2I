@@ -18,6 +18,8 @@ function App() {
         <br />
         <Link to={"/projects/321?mode=1&toto=2"}>Aller au projet</Link>
         <br />
+        <Link to={"/projects/321?toto=2"}>Aller au projet</Link>
+        <br />
         <button onClick={clickHandler}>Clique pour aller au projet</button>
       </main>
     </div>
