@@ -3,7 +3,7 @@ import router from './app-routing';
 import ContactContext from './routes/contacts/ContactContext';
 import { useState } from 'react';
 
-function App() {
+function First() {
 
   const [contacts, setContacts] = useState([])
  
@@ -16,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default First;

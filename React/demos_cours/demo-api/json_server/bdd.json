@@ -1,9 +1,16 @@
 {
-    "personnes" : [
-        {
-            "id" : 1,
-            "nom" : "toto",
-            "prenom" : "tata"
-        }
-    ]
+  "personnes": [
+    {
+      "nom": "tutu",
+      "prenom": "titi",
+      "id": 2
+    }
+  ],
+  "truc": [
+    {
+      "nom": "tutu",
+      "prenom": "titi",
+      "id": 1
+    }
+  ]
 }
