@@ -5,7 +5,16 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Compte from "./components/Compte";
 
 
-const authCheck = (role) => {
+// const authCheck = (role) => {
+//     if(role === "Admin"){
+//         return true
+//     }else {
+//         return redirect("/auth")
+//     }
+// }
+
+const authCheck = () => {
+    const role = localStorage.getItem('role')
     if(role === "Admin"){
         return true
     }else {
