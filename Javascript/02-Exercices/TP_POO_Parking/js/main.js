@@ -1,8 +1,5 @@
 import Vehicule from "./classe/Vehicule.js";
 
-
-
-
 const btnPayer = document.querySelector('#paymentBtn');
 const btnEnter = document.querySelector('#enterBtn');
 const licencePlate = document.querySelector('#licencePlate');
@@ -18,7 +15,7 @@ btnEnter.onclick = () => {
     const vehicule = vehicules.find(vehicule => vehicule.id == licencePlate.value)
     console.log(vehicule)
     // Vérification vehicule present
-    if(!vehicule){
+    if(vehicule == undefined){
         if(licencePlate.value != ''){
             vehicules.push(new Vehicule(licencePlate.value))
             console.table(vehicules)

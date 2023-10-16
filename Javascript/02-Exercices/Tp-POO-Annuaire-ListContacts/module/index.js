@@ -75,18 +75,18 @@ function updateTab() {
     // On vide le tableau
     tableau.innerHTML = '';
     // On le rempli des nouvelles valeurs
-    for (let i = 0; i < Contacts.length; i++) {
+    Contacts.forEach((contact) => {
         tableau.innerHTML += `
         <tr>
-            <td>${Contacts[i].titre}</td>
-            <td>${Contacts[i].nom}</td>
-            <td>${Contacts[i].prenom}</td>
-            <td>${Contacts[i].dateNaissance}</td>
-            <td>${Contacts[i].telephone}</td>
-            <td>${Contacts[i].email}</td>
+            <td>${contact.titre}</td>
+            <td>${contact.nom}</td>
+            <td>${contact.prenom}</td>
+            <td>${contact.dateNaissance}</td>
+            <td>${contact.telephone}</td>
+            <td>${contact.email}</td>
         </tr>        
         `
-    }
+    })
 }
 
 
