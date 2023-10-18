@@ -26,6 +26,7 @@ const recipeSlice = createSlice({
         },
         editRecipe: (state, action) => {
             let foundRecipe = state.recipes.find(recipe => recipe.id === action.payload.id)
+            console.log(foundRecipe);
             if (foundRecipe) {
                 state.recipes = [...state.recipes.filter(r => r.id !== action.payload.id), action.payload]
             }
