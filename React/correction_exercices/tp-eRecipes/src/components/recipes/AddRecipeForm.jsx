@@ -5,8 +5,8 @@ import { addRecipe, setFormMode } from "./recipesSlice";
 
 const AddRecipeForm = () => {
     const ingredients = useSelector(state => state.recipes.ingredients)
-    const recipes = useSelector(state => state.recipes.recipes)
     const dispatch = useDispatch()
+    const token = localStorage.getItem("token")
 
     const titleRef = useRef()
     const cookTimeRef = useRef()
@@ -17,7 +17,6 @@ const AddRecipeForm = () => {
     const submitFormHandler = async (event) => {
         event.preventDefault()
         const selectedIngredients = []
-        const token = localStorage.getItem("token")
 
         for (const option of ingredientsRef.current.options){
             if (option.selected) {

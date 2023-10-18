@@ -6,9 +6,8 @@ import { BASE_DB_URL } from "../../firebaseConfig";
 const EditRecipeForm = () => {
     const selectedRecipe = useSelector(state => state.recipes.selectedRecipe)
     const ingredients = useSelector(state => state.recipes.ingredients)
-    const recipes = useSelector(state => state.recipes.recipes)
-    const user = useSelector(state => state.auth.user)
     const dispatch = useDispatch()
+    const token = localStorage.getItem("token")
 
     const titleRef = useRef()
     const cookTimeRef = useRef()
@@ -19,7 +18,6 @@ const EditRecipeForm = () => {
     const submitFormHandler = async (event) => {
         event.preventDefault()
         const selectedIngredients = []
-        const token = localStorage.getItem("token")
 
         for (const option of ingredientsRef.current.options){
             if (option.selected) {
@@ -46,7 +44,7 @@ const EditRecipeForm = () => {
                 })
 
                 if(!response.ok) {
-                    throw new Error("Something went wrong during the POST recipe request")
+                    throw new Error("Something went wrong during the PATCH recipe request")
                 }
 
                 const data = await response.json()
