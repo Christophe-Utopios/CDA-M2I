@@ -20,7 +20,7 @@ export const postTodo = createAsyncThunk(
         const response = await fetch(BASE_DB_URL + "/todoList.json", {
             method: "POST",
             headers: {
-                "Content-Type": "application.json"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(newTodo)
         })
