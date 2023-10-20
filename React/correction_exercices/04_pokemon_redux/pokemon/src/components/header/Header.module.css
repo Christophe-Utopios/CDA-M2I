@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.logoPokemon{
+    height: 50px;
+}
+
+.logoPokeball {
+    height: 30px;
+}
+
+.h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.h2{
+    font-size: 20px;
+    color: gray;
+}

@@ -1,0 +1,12 @@
+.card {
+    width: calc(33.33% - 10px);
+    margin: 10px 0 10px 0;
+    text-decoration: none;
+    color: black;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+
+    &&:hover {
+        background-color: lightgrey;
+    }
+}

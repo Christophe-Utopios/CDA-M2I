@@ -1,0 +1,18 @@
+.modal {
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modalContent {
+    margin: 15vh auto;
+    padding: 1vh 1vw;
+    background-color: white;
+    color: black;
+    width: 40%;
+    max-width: 350px;
+    border-radius: 1rem;
+  }
