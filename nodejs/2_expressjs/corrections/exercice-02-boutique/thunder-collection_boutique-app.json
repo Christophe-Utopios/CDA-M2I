@@ -1,0 +1,172 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "boutique-app",
+    "dateExported": "2023-10-26T09:29:16.464Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "a0a6c2c0-759a-4bc6-bf09-0de8a937d91a",
+            "name": "customers",
+            "containerId": "",
+            "created": "2023-10-26T07:45:04.621Z",
+            "sortNum": 5000
+        },
+        {
+            "_id": "ef33699a-59f3-45d8-a287-5657b5eeee7b",
+            "name": "products",
+            "containerId": "",
+            "created": "2023-10-26T07:46:12.138Z",
+            "sortNum": 7500
+        },
+        {
+            "_id": "9bd34ffb-8b56-42c5-b1eb-981b43774a64",
+            "name": "orders",
+            "containerId": "",
+            "created": "2023-10-26T07:46:27.019Z",
+            "sortNum": 17500
+        }
+    ],
+    "requests": [
+        {
+            "_id": "36fd92db-43a5-4c4e-b3f7-8a29c0341756",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "a0a6c2c0-759a-4bc6-bf09-0de8a937d91a",
+            "name": "get-all",
+            "url": "http://[::1]:7777/customers",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-26T07:45:20.438Z",
+            "modified": "2023-10-26T07:47:22.375Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ca940b87-2c20-4502-957f-119c53157010",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "ef33699a-59f3-45d8-a287-5657b5eeee7b",
+            "name": "get-all",
+            "url": "http://[::1]:7777/products",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-26T07:46:12.138Z",
+            "modified": "2023-10-26T07:47:30.183Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "752476a9-fa4d-4dbb-b50a-feb1101954b7",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "9bd34ffb-8b56-42c5-b1eb-981b43774a64",
+            "name": "get-all",
+            "url": "http://[::1]:7777/orders",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-26T07:46:27.019Z",
+            "modified": "2023-10-26T07:47:35.590Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "54a95cd2-2a11-458e-8b64-40e81f6c924c",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "a0a6c2c0-759a-4bc6-bf09-0de8a937d91a",
+            "name": "get-one-by-id",
+            "url": "http://[::1]:7777/customers/45e239f5-1c82-4417-a8fe-6d879767feb0",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-26T07:45:28.691Z",
+            "modified": "2023-10-26T09:22:19.333Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "084d873f-224e-4fbb-82ca-c7ca0cfe1c6b",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "ef33699a-59f3-45d8-a287-5657b5eeee7b",
+            "name": "get-one-by-id",
+            "url": "http://[::1]:7777/products/7f256523-308c-4ae9-83ee-202efe308fdc",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-26T07:46:12.139Z",
+            "modified": "2023-10-26T09:22:36.561Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "259fa5a2-78bf-40cb-9123-61fb88c8ee94",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "9bd34ffb-8b56-42c5-b1eb-981b43774a64",
+            "name": "get-one-by-id",
+            "url": "http://[::1]:7777/orders",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-26T07:46:27.020Z",
+            "modified": "2023-10-26T07:48:02.198Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6cb79f67-ff00-4c16-a71d-5871995191b2",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "a0a6c2c0-759a-4bc6-bf09-0de8a937d91a",
+            "name": "create",
+            "url": "http://[::1]:7777/customers",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-26T07:45:50.838Z",
+            "modified": "2023-10-26T08:13:54.243Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\": \"Michel\",\n  \"lastName\": \"Polnaref\",\n  \"phone\": \"0102030210\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5e77ca9d-a472-4812-acb7-dd736004358a",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "ef33699a-59f3-45d8-a287-5657b5eeee7b",
+            "name": "create",
+            "url": "http://[::1]:7777/products",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-26T07:46:12.140Z",
+            "modified": "2023-10-26T09:23:22.435Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Ecran DELL 24pouces\",\n  \"price\": 130,\n  \"stock\": 50\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "380cea0b-b3b5-4d94-867a-09e8802547e4",
+            "colId": "0e19bcc9-292c-46c1-a86c-45eddfda7dee",
+            "containerId": "9bd34ffb-8b56-42c5-b1eb-981b43774a64",
+            "name": "create",
+            "url": "http://[::1]:7777/orders",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-10-26T07:46:27.021Z",
+            "modified": "2023-10-26T09:24:00.964Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"customer\": {\n    \"id\": \"45e239f5-1c82-4417-a8fe-6d879767feb0\",\n    \"firstName\": \"Michel\",\n    \"lastName\": \"Polnaref\",\n    \"phone\": \"0102030210\"\n  },\n  \"products\": [\n    {\n      \"id\": \"7f256523-308c-4ae9-83ee-202efe308fdc\",\n      \"title\": \"Casque Sony WH1000XM4\",\n      \"price\": 230,\n      \"stock\": 24\n    },\n    {\n      \"id\": \"35b2a824-c8b5-4fc9-8924-442f4d6d9257\",\n      \"title\": \"Bouteille evian 1L\",\n      \"price\": 2,\n      \"stock\": 100\n    }\n  ]\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "01-initialiser-projet",
+  "version": "1.0.0",
+  "description": "initialisation d'un projet nodejs avec la commande npm init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "Arthur",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

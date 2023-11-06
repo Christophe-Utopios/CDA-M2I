@@ -1,0 +1,117 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "todo-app",
+    "dateExported": "2023-10-25T08:14:32.261Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c9d6680a-9622-4d44-9033-995421b936a3",
+            "colId": "8bae6e10-be7a-47d8-accc-4fbc32864c64",
+            "containerId": "",
+            "name": "get-all-todos",
+            "url": "http://[::1]:3001/todos",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2023-10-24T15:39:34.526Z",
+            "modified": "2023-10-24T15:43:56.579Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "958368a8-b668-4a97-891e-cf1393957594",
+            "colId": "8bae6e10-be7a-47d8-accc-4fbc32864c64",
+            "containerId": "",
+            "name": "get-one-todo",
+            "url": "http://[::1]:3001/todos/c9d0443d-8781-43b4-b650-f80c2df85131",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2023-10-24T15:44:12.167Z",
+            "modified": "2023-10-25T08:01:54.419Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d1f1e24e-4821-415f-9cd1-2b829207a21d",
+            "colId": "8bae6e10-be7a-47d8-accc-4fbc32864c64",
+            "containerId": "",
+            "name": "create-todo",
+            "url": "http://[::1]:3001/todos",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2023-10-24T15:36:40.422Z",
+            "modified": "2023-10-25T08:10:56.129Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"jouer\",\n  \"content\":\"lancer steam\",\n  \"statut\":false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e144585d-2ae4-4f16-a6af-b4a1299aebc9",
+            "colId": "8bae6e10-be7a-47d8-accc-4fbc32864c64",
+            "containerId": "",
+            "name": "update-todo",
+            "url": "http://[::1]:3001/todos/72095c03-a5af-4de1-91de-e1ee7ef5e078",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-10-24T15:43:39.717Z",
+            "modified": "2023-10-25T07:41:28.395Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"72095c03-a5af-4de1-91de-e1ee7ef5e078\",\n  \"title\": \"Je vais prendre une soupe au distributeur\",\n  \"content\": \"Trop bon, une pure dinguerie\",\n  \"statut\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ecb27090-0009-4f41-a3d0-c251bdaefc4c",
+            "colId": "8bae6e10-be7a-47d8-accc-4fbc32864c64",
+            "containerId": "",
+            "name": "edit-statut-todo",
+            "url": "http://[::1]:3001/todos/c9d0443d-8781-43b4-b650-f80c2df85131/statut",
+            "method": "PATCH",
+            "sortNum": 35000,
+            "created": "2023-10-24T15:51:42.848Z",
+            "modified": "2023-10-25T08:01:15.099Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e4b1521b-e8c9-45f7-b322-a8d18e4df0e3",
+            "colId": "8bae6e10-be7a-47d8-accc-4fbc32864c64",
+            "containerId": "",
+            "name": "delete-todo",
+            "url": "http://[::1]:3001/todos/c9d0443d-8781-43b4-b650-f80c2df85131",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-10-24T15:47:59.774Z",
+            "modified": "2023-10-24T15:48:09.633Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7dd0dc4a-be7b-4bb5-ac00-e27429fa2db1",
+            "colId": "8bae6e10-be7a-47d8-accc-4fbc32864c64",
+            "containerId": "",
+            "name": "search-todo-by-title",
+            "url": "http://[::1]:3001/todos/search/jouer",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-10-24T15:50:25.300Z",
+            "modified": "2023-10-25T08:11:09.360Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
