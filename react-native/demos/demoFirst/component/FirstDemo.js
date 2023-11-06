@@ -1,14 +1,26 @@
 import { useState } from "react";
-import { StyleSheet, Text, TextInput, View } from "react-native";
+import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import TestModal from "./TestModal";
 
 
 export default function FirstDemo(){
 
     const [textInput,setTextInput]= useState('')
+    const [modalVisible,setModalVisible]= useState(false)
 
     function RecupInput(enterText){
         setTextInput(enterText)
         console.log(textInput)
+    }
+
+    function MessageConsole(){
+        console.log("Clique sur le bouton")
+        setModalVisible(true)
+    }
+
+    function closeModal(){
+        console.log("fermeture modal")
+        setModalVisible(false)
     }
 
 
@@ -16,6 +28,8 @@ export default function FirstDemo(){
         <View style={styles.container}>
             <Text style={[styles.monTexte,styles.tailleTexte]}>Mon premier composant React native</Text>
             <TextInput onChangeText={RecupInput} value={textInput}/>
+            <Button title="Bouton" onPress={MessageConsole}/>
+            <TestModal visible={modalVisible} closeModal={closeModal}></TestModal>
         </View> 
     )
     
