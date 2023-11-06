@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import { Button, FlatList, StyleSheet, Text, TextInput, View } from "react-native";
 import TestModal from "./TestModal";
 
 
@@ -23,6 +23,12 @@ export default function FirstDemo(){
         setModalVisible(false)
     }
 
+    const tab = [
+        { text: "toto", id: 1},
+        { text: "tata", id: 2},
+        { text: "tutu", id: 3},
+    ]
+
 
     return(
         <View style={styles.container}>
@@ -30,6 +36,17 @@ export default function FirstDemo(){
             <TextInput onChangeText={RecupInput} value={textInput}/>
             <Button title="Bouton" onPress={MessageConsole}/>
             <TestModal visible={modalVisible} closeModal={closeModal}></TestModal>
+            <FlatList data={tab} renderItem={(itemData) => {
+                return (
+                    <View>
+                        <Text style={styles.monTexte}>{itemData.item.text} {itemData.item.id}</Text>
+                    </View>
+                )
+            }} keyExtractor={(item,index) => {
+                return index
+            }}
+            
+            />
         </View> 
     )
     
