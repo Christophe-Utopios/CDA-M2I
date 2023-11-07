@@ -15,7 +15,7 @@ export default function ModalInput(props) {
   return (
     <Modal visible={props.visible} animationType='slide'>
     <View style={styles.container}>
-        <Pressable onPress={props.closeModale}>
+        <Pressable onPress={props.closeModale} style={({pressed}) => pressed && styles.presseditem}>
       <Image source={require('./assets/caddie.png')} style={styles.image} resizeMode='contain'/>
       </Pressable>
       <TextInput style={styles.textInput} placeholder='Article exemple'value={texteArticle} onChangeText={recupTextArticle}/>
@@ -57,6 +57,9 @@ const styles = StyleSheet.create({
     image: {
         width : 100,
         height: 150,
+    },
+    presseditem : {
+        backgroundColor : "yellow",
     }
 
 })

@@ -11,8 +11,8 @@ export default function Article(props) {
 
   return (
     <Pressable onPress={messageConsole}>
-    <View style={styles.articleItem}>
-      <Text style={styles.articleText}>{props.item.text}</Text>
+    <View style={props.isRed ? styles.articleItemSecond : styles.articleItem}>
+      <Text style={props.isRed  ? styles.articleTextSecond : styles.articleText}>{props.item.text}</Text>
     </View>
     </Pressable>
   )
@@ -27,5 +27,14 @@ const styles = StyleSheet.create({
       },
       articleText: {
         color: "white",
+      },
+      articleItemSecond: {
+        margin: 8,
+        padding: 8,
+        borderRadius: 6,
+        backgroundColor: 'red',
+      },
+      articleTextSecond: {
+        color: "yellow",
       }
 })

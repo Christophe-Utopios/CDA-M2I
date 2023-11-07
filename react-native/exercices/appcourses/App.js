@@ -31,6 +31,8 @@ export default function App() {
     }
   return (
     <View style={styles.container}>
+        <Article item={{ text : "article" , id : 99}} isRed></Article>
+        <Article item={{ text : "toto" , id : 98}} isRed></Article>
       <Button title='Add Article' onPress={openModale} />
       <ModalInput visible={modalIsVisible} closeModale={closeModale} addArticle={addArticle}></ModalInput>
       <FlatList data={articles} renderItem={(itemData) => {
@@ -42,6 +44,7 @@ export default function App() {
         return index // item.id
       }}
       ></FlatList>
+      
     </View>
   )
 }
