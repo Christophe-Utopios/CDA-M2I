@@ -23,13 +23,19 @@ export default function App() {
     function openModale(){
         setModalIsVisible(true)
     }
+
+    function deleteArticle(id){
+        setArticles((articlesCurrent) => {
+            return articlesCurrent.filter((item) => item.id != id)
+        } )
+    }
   return (
     <View style={styles.container}>
       <Button title='Add Article' onPress={openModale} />
       <ModalInput visible={modalIsVisible} closeModale={closeModale} addArticle={addArticle}></ModalInput>
       <FlatList data={articles} renderItem={(itemData) => {
         return(
-            <Article item={itemData.item} ></Article>
+            <Article item={itemData.item} deleteArticle={deleteArticle}></Article>
         )
       }
       } keyExtractor={(item,index)=> {
