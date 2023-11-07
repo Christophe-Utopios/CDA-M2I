@@ -1,4 +1,4 @@
-import { Button, Image, Modal, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Button, Image, Modal, Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 
 export default function ModalInput(props) {
@@ -15,7 +15,9 @@ export default function ModalInput(props) {
   return (
     <Modal visible={props.visible} animationType='slide'>
     <View style={styles.container}>
+        <Pressable onPress={props.closeModale}>
       <Image source={require('./assets/caddie.png')} style={styles.image} resizeMode='contain'/>
+      </Pressable>
       <TextInput style={styles.textInput} placeholder='Article exemple'value={texteArticle} onChangeText={recupTextArticle}/>
       {/* <Button title='Add Article' onPress={() => props.addArticle(texteArticle)} /> */}
       <View style={styles.buttonContainer}>
