@@ -17,7 +17,7 @@ export default function App() {
   return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName='PageC'>
-            <Stack.Screen name='PageA' component={PageA} />
+            <Stack.Screen name='PageA' component={PageA} options={{title : "Ma Page A"}}/>
             <Stack.Screen name='PageB' component={PageB} />
             <Stack.Screen name='PageC' component={PageC} options={{headerShown : false}} />
         </Stack.Navigator>
