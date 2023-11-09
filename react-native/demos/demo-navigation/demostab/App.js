@@ -18,10 +18,13 @@ const Tab = createBottomTabNavigator()
 export default function App() {
   return (
     <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator screenOptions={{tabBarIconStyle:{display: 'none'},tabBarLabelPosition: "beside-icon"}}>
             <Tab.Screen name='Home' component={Home} />
             <Tab.Screen name='Contact' component={Contact} />
             <Tab.Screen name='About' component={About} />
+            <Tab.Screen name='PageA' component={About} />
+            <Tab.Screen name='PageB' component={About} />
+            <Tab.Screen name='PageC' component={About} />
         </Tab.Navigator>
     </NavigationContainer>
   )
