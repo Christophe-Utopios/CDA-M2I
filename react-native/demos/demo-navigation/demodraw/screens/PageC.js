@@ -1,20 +1,19 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View,Button } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
-export default function PageB() {
-
-  const navigation = useNavigation()
+export default function PageC() {
+    const navigation = useNavigation()
   return (
     <View>
-      <Text>PageB</Text>
+      <Text>PageC</Text>
       <Button
       title='Open Drawer'
       onPress={() => navigation.openDrawer()}
       />
       <Button
-      title='Goto PageC'
-      onPress={() => navigation.navigate("PageC")}
+      title='Home PageB'
+      onPress={() => navigation.navigate("PageB")}
       />
     </View>
   )

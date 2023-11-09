@@ -1,9 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
 import PageA from './screens/PageA'
 import PageB from './screens/PageB'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import PageC from './screens/PageC'
+
 
 // package necessaire navigation :
 // npm install @react-navigation/native
@@ -16,13 +19,35 @@ import PageB from './screens/PageB'
 // npm i @react-navigation/native-stack
 
 
-const Drawer = createDrawerNavigator()
 
+const Drawer = createDrawerNavigator()
+const Stack = createNativeStackNavigator()
+
+function MyButton(){
+  return(
+    <Pressable onPress={() => {console.log("mon joli bouton")}}>
+      <Text>Clique</Text>
+    </Pressable>
+  )
+}
+
+function MyStack(){
+  return(
+    <Stack.Navigator screenOptions={{headerShown : false}}>
+      {/* <Stack.Screen name='PageA' component={PageA} options={{title : "Home Page"}}/> */}
+      <Stack.Screen name='Drawer' component={MyDrawer} options={{headerShown: false}}/>
+      <Stack.Screen name='PageC' component={PageC} options={{headerShown : true,headerRight : MyButton}}/>
+
+    </Stack.Navigator>
+  )
+    
+}
 
 function MyDrawer(){
   return(
   <Drawer.Navigator>
-    <Drawer.Screen name='PageA' component={PageA} options={{headerShown: false}}/>
+    {/* <Drawer.Screen name='PageA' component={PageA} options={{headerShown: false}}/> */}
+    {/* <Drawer.Screen name='MyStack' component={MyStack} options={{headerShown: true}}/> */}
     <Drawer.Screen name='PageB' component={PageB} />
   </Drawer.Navigator>
 )
@@ -32,7 +57,8 @@ function MyDrawer(){
 export default function App() {
   return (
     <NavigationContainer>
-        <MyDrawer></MyDrawer>
+        {/* <MyDrawer></MyDrawer> */}
+        <MyStack></MyStack>
     </NavigationContainer>
   )
 }
