@@ -11,17 +11,28 @@ import PageB from './screens/PageB'
 // npm i @react-navigation/drawer
 // npm i react-native-gesture-handler
 // npm i react-native-reanimated
+// modification du fichier /babel.config.js => ajout de la ligne :
+// plugins: ['react-native-reanimated/plugin']
+// npm i @react-navigation/native-stack
 
 
 const Drawer = createDrawerNavigator()
 
+
+function MyDrawer(){
+  return(
+  <Drawer.Navigator>
+    <Drawer.Screen name='PageA' component={PageA} options={{headerShown: false}}/>
+    <Drawer.Screen name='PageB' component={PageB} />
+  </Drawer.Navigator>
+)
+      
+}
+
 export default function App() {
   return (
     <NavigationContainer>
-        <Drawer.Navigator>
-            <Drawer.Screen name='PageA' component={PageA} />
-            <Drawer.Screen name='PageB' component={PageB} />
-        </Drawer.Navigator>
+        <MyDrawer></MyDrawer>
     </NavigationContainer>
   )
 }
