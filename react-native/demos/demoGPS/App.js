@@ -28,7 +28,7 @@ export default function App() {
   return (
     <View>
       <Text>Latitude : {latitude}</Text>
-      <Text>Latitude : {longitude}</Text>
+      <Text>Longitude : {longitude}</Text>
     </View>
   )
 }
