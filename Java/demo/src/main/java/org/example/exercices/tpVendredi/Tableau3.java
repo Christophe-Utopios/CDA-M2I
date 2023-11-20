@@ -80,7 +80,7 @@ public class Tableau3 {
             for (int i = 0; i < tab.length; i++) {
                 somme[i] = tab[i] + tab2[i];
             }
-            System.out.println("Les tableaux ont la même dimension et leurs sommes est de  : " + somme);
+            System.out.println("Les tableaux ont la même dimension et leurs sommes est de  : " + Arrays.toString(somme));
 
         }
 
